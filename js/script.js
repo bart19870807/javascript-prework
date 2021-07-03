@@ -32,8 +32,34 @@ else if(playerInput == '2'){
 else if(playerInput == '3'){
 	playerMove = 'nozyce'
 }
-// else(playerInput>=4){
-// 	printMessage('podales zla wartosc');
-// }
+//wrong playerInput
+else if(playerInput>=4){
+	printMessage('podales zla wartosc');
+}
 
 printMessage('Twój ruch to: ' + playerMove);
+
+// score
+
+if( computerMove == 'kamień' && playerMove == 'papier'){
+	printMessage('Ty wygrywasz!');
+}
+else if (computerMove == 'papier' && playerMove == 'kamien') {
+	printMessage('Komputer wygrywa!');
+}
+else if (computerMove == 'nozyce' && playerMove == 'papier'){
+	printMessage('Komputer wygrywa!');
+}
+else if (computerMove == 'papier' && playerMove == 'nozyce'){
+	printMessage('Ty wygrywasz!');
+}
+else if (computerMove == 'kamien' && playerMove == 'nozyce'){
+	printMessage('Komputer wygrywa!');
+}
+else if (computerMove == 'nozyce' && playerMove == 'kamien'){
+	printMessage('Ty wygrywasz!');
+}
+else if (computerMove == 'kamien' && playerMove == 'kamien'|| computerMove == 'papier' && playerMove == 'papier' || computerMove == 'nozyce' && playerMove == 'nozyce')
+{
+	printMessage('Remis - zagrajcie jeszcze raz');
+}
