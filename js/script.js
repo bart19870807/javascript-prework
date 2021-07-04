@@ -1,3 +1,54 @@
+let computerMove =  Math.floor(Math.random() * 3 + 1);
+let playerMove = Math.floor(Math.random() * 3 + 1);
+
+console.log('computerMove:'+ computerMove);
+console.log('playerMove'+ playerMove);
+
+let argComputerMove = getMoveName(computerMove);
+console.log(argComputerMove);
+
+let argPlayerMove = getMoveName(playerMove);
+console.log(argPlayerMove);
+
+function getMoveName(argMoveId){
+    if(argMoveId == 1){
+        return'kamien';
+    }
+    else if(argMoveId == 2){
+        return'papier';
+    }
+    else (argMoveId == 3)
+    {
+        return'nozyce';
+    }
+}
+
+function displayResult(argComputerMove, argPlayerMove){
+	printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
+	if( argComputerMove == 'kamień' && argPlayerMove == 'papier'){
+		printMessage('Ty wygrywasz!');
+    } 
+    else if( argComputerMove == 'papier' && argPlayerMove == 'nozyce'){
+        printMessage('Ty wygrywasz!');
+    } 
+    else if( argComputerMove == 'nozyce' && argPlayerMove == 'kamien'){
+        printMessage('Ty wygrywasz!');
+    } 
+    else if( argComputerMove == 'nozyce' && argPlayerMove == 'nozyce'){
+        printMessage('Jest remis!');
+    }
+    else if( argComputerMove == 'kamien' && argPlayerMove == 'kamien'){
+        printMessage('Jest remis!');
+    }
+    else if( argComputerMove == 'papier' && argPlayerMove == 'papier'){
+        printMessage('Jest remis!');
+    }
+    else {
+        printMessage('Tym razem przegrywasz :(');
+    }
+}
+displayResult(argComputerMove, argPlayerMove)
+
 // Computer move
 
 // let randomNumber = Math.floor(Math.random() * 3 + 1);
