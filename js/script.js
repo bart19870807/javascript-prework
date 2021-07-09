@@ -1,57 +1,5 @@
-// function playGame(playerInput) {
-// 	clearMessages();
-// let randomNumber = Math.floor(Math.random() * 3 + 1);
-// console.log(randomNumber);
-// let argComputerMove = getMoveName(randomNumber);
-// let argPlayerMove = getMoveName(playerInput);
-// function getMoveName(argMoveId) {
-// if (argMoveId == 1) {
-// 		return "kamień";
-// } else if (argMoveId == 2) {
-// 		return "papier";
-// } else if (argMoveId == 3) {
-// 		return 'nozyce';
-// } else {
-// 	printMessage("Nie znam ruchu o id " + argMoveId + ".");
-// 	return "nieznany ruch";
-// 	}
-// }
-// }
-// function displayResult(argComputerMove, argPlayerMove) {
-// 	printMessage("Zagrałem " + argComputerMove + ', a Ty ' + argPlayerMove);
-
-// 	if( argComputerMove == "kamień" && argPlayerMove == "papier") {
-// 		printMessage("Ty wygrywasz!");
-// 	} else if ( argComputerMove == "papier" && argPlayerMove == "kamień") {
-// 		printMessage("Komputer wygrywa!");
-// 	} else if ( argComputerMove == "nozyce" && argPlayerMove == "papier") {
-// 		printMessage("Komputer wygrywa!");
-// 	} else if ( argComputerMove == "papier" && argPlayerMove == "nozyce") {
-// 		printMessage("Ty wygrywasz!");
-// 	} else if ( argComputerMove == 'kamień' && argPlayerMove == 'nozyce') {
-// 		printMessage('Komputer wygrywa');
-// 	} else if ( argComputerMove == 'nozyce' && argPlayerMove == 'kamień') {
-// 		printMessage('Ty wygrywasz!');
-// 	}else {
-//         printMessage("Tym razem przegrywasz :(");
-//     }
-// }
-// 	displayResult(argComputerMove, argPlayerMove);
-
-
-
-
-// document.getElementById('play-rock').addEventListener('click', function(){
-// 	playGame(1);
-// });
-// document.getElementById('play-paper').addEventListener('click', function(){
-// 	playGame(2);
-// });
-// document.getElementById('play-paper').addEventListener('click', function(){
-// 	playGame(3);
-// });
-// funkcja print wypisuje w div id wiadomość
-function printMessage(msg) {
+{
+const printMessage = function (msg) {
 	let div = document.createElement("div");
 	// let div zmienna odpowiedzialna za utworzenie elementu div
 	div.innerHTML = msg;
@@ -60,12 +8,12 @@ function printMessage(msg) {
 	//wybiera element o id message (div) 
   }
 //   funkcja czyszczaca
-  function clearMessages() {
+const clearMessages = function () {
 	document.getElementById("messages").innerHTML = "";
 	// wybiera div o id message i wstawia tam text -pustu,bez znakow
   }
   
-  function playGame(playerInput) {
+const playGame = function (playerInput) {
 // funkcja losujaca kamien papier lub nozyce
 	clearMessages();
 // po wylosowaniu i rozpoczeciu nowej gry funkcja clear wymazuje poprzedni wynik
@@ -89,7 +37,7 @@ function printMessage(msg) {
 	  }
 	}
   
-	function displayResult(argComputerMove, argPlayerMove) 
+const displayResult = function (argComputerMove, argPlayerMove) 
 	// funkcja wyswietlająca rezultat starcia
 	{
 	  printMessage("Zagrałem " + argComputerMove + ", a Ty " + argPlayerMove);
@@ -128,4 +76,4 @@ function printMessage(msg) {
   });
 //   wywołanie elementu od dowolnym id  player rock player-paper player-scissor i nadanie mu zachowania po kliknieciu
 // mam na mysli przypisalismy wartość 1 2 3 dla konkretnego zdazenia np 1=kamien przycisk kamien wywoła wartość jeden czyli kamien (ruch playera)
-  
+}
