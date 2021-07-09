@@ -23,7 +23,7 @@ const playGame = function (playerInput) {
 // zmienna a zarazem funkcja która po wylosowaniu numeru przypisuje mu wartość papier kamien nozyce
 	let argPlayerMove = getMoveName(playerInput);
 // zmienna- funkcja która przypisuje wartość po wylosowaniu numeru (ale nie widzę w kodzie warunków dla argPlayer)
-	function getMoveName(argMoveId) {
+function getMoveName (argMoveId) {
 	  if (argMoveId == 1) {
 		return "kamień";
 	  } else if (argMoveId == 2) {
